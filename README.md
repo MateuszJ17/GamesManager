@@ -3,7 +3,9 @@ Simple board games managment system created with ASP.NET Core and Angular
 
 # Requirements
 <a href="https://dotnet.microsoft.com/download">.NET Core 3.1+</a>
+<br>
 <a href="https://nodejs.org/en/">Node.js</a>
+<br>
 <a href="https://www.postgresql.org/download/">PostgreSQL</a>
 
 # How to run
