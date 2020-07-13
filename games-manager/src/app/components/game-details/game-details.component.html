@@ -1,0 +1,32 @@
+<div class="container-fluid p-2">
+  <a class="btn btn-outline-secondary" [routerLink]="['/']">Back</a>
+  <div class="col d-flex flex-column">
+    <div class="my-2 d-flex flex-column text-center">
+      <label for="gameId">Game ID:</label>
+      <h3 id="gameId">{{ game.id }}</h3>
+    </div>
+    <div class="my-2 d-flex flex-column text-center">
+      <label for="gameName">Game Name:</label>
+      <h3 id="gameName">{{ game.name }}</h3>
+    </div>
+    <div class="my-2 d-flex flex-column text-center">
+      <label for="gameMinPlayers">Game minimal number of players:</label>
+      <h3 id="gameMinPlayers">{{ game.minPlayers }}</h3>
+    </div>
+    <div class="my-2 d-flex flex-column text-center">
+      <label for="gameMaxPlayers">Game maximal number of players:</label>
+      <h3 id="gameMaxPlayers">{{ game.maxPlayers }}</h3>
+    </div>
+    <div class="my-2 d-flex flex-column text-center">
+      <label for="gameMinAge">Game minimal age of players:</label>
+      <h3 id="gameMinAge">{{ game.minAge }}</h3>
+    </div>
+
+    <div class="my-2 mt-4 d-flex flex-column text-center">
+      <h3>History of visits: </h3>
+      <div *ngFor="let history of history">
+        <p><b>Date visited:</b> {{ history.date | date: 'short' }} <b>Source:</b> {{ history.source }}</p>
+      </div>
+    </div>
+  </div>
+</div>

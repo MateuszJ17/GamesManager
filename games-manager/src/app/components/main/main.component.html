@@ -1,0 +1,12 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Games Manager</a>
+</nav>
+
+<div class="container-fluid">
+  <a type="button" class="btn btn-primary p-2 m-2 mr-3 float-right text-white" (click)="addClick()">Add Game</a>
+  <div class="col d-flex flex-column p-3">
+    <div *ngFor="let game of games;">
+      <app-game-card [game]="game" (deleted)="handleDelete($event)"></app-game-card>
+    </div>
+  </div>
+</div>
