@@ -3,6 +3,27 @@
     <h5 class="card-title">{{ game.name }}</h5>
     <a class="btn btn-primary text-white mr-2" [routerLink]="['/details', game.id]">Details</a>
     <a class="btn btn-warning text-white mx-2" [routerLink]="['/edit', game.id]">Edit</a>
-    <a class="btn btn-danger text-white mx-2" (click)="onDelete(game.id)">Delete</a>
+    <button class="btn btn-danger text-white mx-2" data-toggle="modal" data-target="#deleteModal">Delete</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Confirm deletion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete {{ game.name }}?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="onDelete(game.id)">Yes</button>
+        <button type="button" class="btn btn-primary">No</button>
+      </div>
+    </div>
   </div>
 </div>
